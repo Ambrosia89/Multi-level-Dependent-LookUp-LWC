@@ -1,0 +1,17 @@
+<template>
+  <lightning-card>
+    <c-reusable-lookup
+      label={displayTextName}
+      selected-icon-name={iconName}
+      object-label={objectLabel}
+      object-api-name={objectLabel}
+      field-api-name={mainFieldApiName}
+      other-field-api-name={otherFieldApiName}
+      parent-record-id={parentAccountSelectedRecord}
+      parent-field-api-name="AccountId"
+      include-closed-opportunities={includeClosedOpportunities}
+      is-required={isRequired}
+      onvalueselected={handleValueSelectedOnChild}
+    ></c-reusable-lookup>
+  </lightning-card>
+</template>

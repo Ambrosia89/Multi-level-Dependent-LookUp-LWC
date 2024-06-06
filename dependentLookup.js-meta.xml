@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<LightningComponentBundle xmlns="http://soap.sforce.com/2006/04/metadata">
+    <apiVersion>59.0</apiVersion>
+    <isExposed>true</isExposed>
+    <targets>
+        <target>lightning__FlowScreen</target>
+    </targets>
+    <targetConfigs>
+       <targetConfig targets="lightning__FlowScreen ">
+        <property
+        name="parentAccountSelectedRecord"
+        type="String"
+        label="Parent Client Id"
+        role="inputOnly"
+        description="Enter the parent client record Id"
+      />
+     <property
+        name="objectLabel"
+        type="String"
+        label="Object Name"
+        role="inputOnly"
+        description="Enter the API name of the object to lookup"
+      />
+
+      <property
+        name="mainFieldApiName"
+        type="String"
+        label="Primary Search Field"
+        role="inputOnly"
+        description="Enter the API name of the primary field to search. This should be a searchable field, preferrably a string."
+      />
+
+
+            <property
+        name="otherFieldApiName"
+        type="String"
+        label="Secondary Search Field"
+        role="inputOnly"
+        description="Enter the API name of the secondary field to search. This should be a searchable field, preferrably a string."
+      />
+
+            <property
+        name="includeClosedOpportunities"
+        type="Boolean"
+        label="Include Closed Opportunities"
+        role="inputOnly"
+        default="false"
+        description="If Opportunity is the lookup object, specify if closed opportuntities should be included. Default is false."
+      />
+
+                  <property
+        name="isRequired"
+        type="Boolean"
+        label="Required"
+        role="inputOnly"
+        default="true"
+        required="true"
+        description="Specify if completing this lookup component is required."
+      />
+
+              <property
+        name="selectedRecordId"
+        type="String"
+        label="Record ID"
+        role="outputOnly"
+        description="The record Id of the user selected record"
+      />
+       </targetConfig>
+
+    </targetConfigs>
+</LightningComponentBundle>
